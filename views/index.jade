@@ -1,0 +1,12 @@
+include partials/header.jade
+include partials/nav.jade
+.container
+  h2=data.headline
+  p=data.intro
+  - for(var i=0; i<data.images.length; i++)
+    - if ( (i==0) || (i%3==0) )
+      .row
+    .col-xs-4
+      a.thumbnail
+        img(src=data.images[i])
+include partials/footer.jade
